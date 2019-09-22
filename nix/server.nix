@@ -1,17 +1,17 @@
-{ mkDerivation, aeson, base, bytestring, containers, directory, fgl
-, file-embed, filepath, foldl, graphviz, hpack, http-types
+{ mkDerivation, aeson, base, bytestring, containers, directory, elm
+, fgl, file-embed, filepath, foldl, graphviz, hpack, http-types
 , open-browser, scotty, stdenv, text, time, turtle, vector
 }:
 mkDerivation {
   pname = "grbr";
   version = "0.1.0.0";
-  src = ../.;
+  src = ./.;
   isLibrary = true;
   isExecutable = true;
   libraryHaskellDepends = [
-    aeson base bytestring containers directory fgl file-embed filepath
-    foldl graphviz http-types open-browser scotty text time turtle
-    vector
+    aeson base bytestring containers directory elm fgl file-embed
+    filepath foldl graphviz http-types open-browser scotty text time
+    turtle vector
   ];
   libraryToolDepends = [ hpack ];
   executableHaskellDepends = [ base ];
